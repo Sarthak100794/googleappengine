@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+       - echo "entering into pre build step"
+  build:
+    commands:
+       - aws --version
+       - ls
+       - aws s3 cp ./codebuild.yaml s3://test-bucket-sarthak-source
+  post_build:
+    commands:
+       - echo "moved file to the repo"
