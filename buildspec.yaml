@@ -7,7 +7,7 @@ phases:
     commands:
        - aws --version
        - ls
-       - aws s3 cp ./codebuild.yaml s3://test-bucket-sarthak-source
+       - aws s3 cp ./cloudbuild.yaml s3://test-bucket-sarthak-source
   post_build:
     commands:
        - echo "moved file to the repo"
